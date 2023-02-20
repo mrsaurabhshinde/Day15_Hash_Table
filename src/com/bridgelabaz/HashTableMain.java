@@ -1,14 +1,14 @@
 package com.bridgelabaz;
 
-public class HashTableMain
-{
+public class HashTableMain {
+
     /**
      *
      * main method all code execute in main method
      */
     public static void main(String[] args) {
 
-        MyHashMap<String, Integer> hashTable = new MyHashMap();
+        MyHashTable<String, Integer> hashTable = new MyHashTable();
         String sentence = "Paranoids are not paranoid because they are paranoid but " +
                 "because they keep putting themselves deliberately into paranoid avoidable situations";
 
@@ -39,7 +39,19 @@ public class HashTableMain
 
                 value = value + 1;
             hashTable.add(word , value);
+            System.out.println("Value = "+value);
         }
+        System.out.println(hashTable);
+
+        /*
+         * Remove "avoidable" from the hashtable
+         */
+
+        hashTable.remove("avoidable");
+
+        /*
+         * Display the hashtable
+         */
         System.out.println(hashTable);
     }
 }
