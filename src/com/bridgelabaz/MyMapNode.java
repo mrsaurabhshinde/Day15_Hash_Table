@@ -7,8 +7,8 @@ public class MyMapNode <K,V>
     MyMapNode<K, V> next;
 
     /**
-     * create parameterised constructor
-     * they initialinze key ,value and ,next is null
+     *  cretae constructor name as MyMaoNode and passing key and value
+     *  here
      * @param key
      * @param value
      */
@@ -17,36 +17,30 @@ public class MyMapNode <K,V>
         this.value = value;
         next = null;
     }
-
     /**
-     * getter and setter used
-     *
-     * @return key
+     * here we use getter and setter
+     * 1st get key and set key
+     * getkey is return key setkey is set the key
      */
     public K getKey() {
         return key;
     }
 
-    /**
-     * setKey is passing the parameter like key
-     * they set the key
-     */
     public void setKey(K key) {
         this.key = key;
+
     }
 
     /**
-     * here we create getValue method
-     * @return value
+     * here we used getvalue method and setvalue
+     * set is set the value
+     * and get value is return value
+     * @return return is value
      */
     public V getValue() {
         return value;
     }
 
-    /**
-     * method create name as setValue
-     * @param value
-     */
     public void setValue(V value) {
         this.value = value;
     }
@@ -56,14 +50,14 @@ public class MyMapNode <K,V>
     }
 
     public void setNext(MyMapNode<K, V> next) {
-        this.next = next;
+        this.next = (MyMapNode<K, V>) next;
     }
 
     @Override
     public String toString() {
         StringBuilder nodeString = new StringBuilder();
-        nodeString.append("Node{" + "Key=").append(key).append(" Value=").append(value).append("}");
-        if(next != null)
+        nodeString.append("MyMapNode{" + " Key= ").append(key).append(" Value= ").append(value).append('}');
+        if (next != null)
             nodeString.append("->").append(next);
         return nodeString.toString();
     }
